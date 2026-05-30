@@ -1,0 +1,6 @@
+{
+  "name": "ChartToHeart",
+  "description": "A modern medical application to scan blank EHR forms, analyze doctor-patient transcriptions, and automatically extract structured clinical fields.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
