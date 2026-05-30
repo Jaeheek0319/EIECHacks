@@ -35,9 +35,9 @@ export default function Hero({ onStartClick }: HeroProps) {
             className="text-4xl sm:text-5xl md:text-6xl font-bold font-sans tracking-tight text-slate-900 max-w-4xl leading-tight sm:leading-none"
             id="app-hero-title"
           >
-            Turn Patient Conversations into <br className="hidden sm:inline" />
+            Chart2Heart turns patient conversations into <br className="hidden sm:inline" />
             <span className="bg-gradient-to-r from-medical-600 to-teal-clinical-600 bg-clip-text text-transparent">
-              Structured EHR Notes
+              structured EHR notes
             </span>
           </motion.h1>
 

@@ -51,6 +51,50 @@
   animation: pulse-heartbeat 1.8s infinite ease-in-out;
 }
 
+.site-background-animations {
+  background-image: radial-gradient(circle at 16% 18%, rgba(14,165,233,0.18), transparent 14%),
+                    radial-gradient(circle at 82% 12%, rgba(16,185,129,0.16), transparent 16%),
+                    radial-gradient(circle at 50% 72%, rgba(59,130,246,0.1), transparent 24%);
+}
+
+.site-background-animations::before,
+.site-background-animations::after {
+  content: "";
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(88px);
+  opacity: 0.85;
+  pointer-events: none;
+  animation: float-blob 16s ease-in-out infinite;
+}
+
+.site-background-animations::before {
+  width: 360px;
+  height: 360px;
+  top: 10%;
+  left: -8%;
+  background: rgba(14,165,233,0.22);
+}
+
+.site-background-animations::after {
+  width: 280px;
+  height: 280px;
+  bottom: -12%;
+  right: -8%;
+  background: rgba(16,185,129,0.24);
+  animation-duration: 18s;
+  animation-direction: reverse;
+}
+
+@keyframes float-blob {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-18px) rotate(12deg);
+  }
+}
+
 .animate-scan {
   animation: scan-line 3s infinite linear;
 }

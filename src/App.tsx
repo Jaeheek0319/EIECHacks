@@ -163,12 +163,29 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 font-sans text-slate-800 flex flex-col justify-between selection:bg-medical-100 selection:text-medical-900" id="ehr-root-app">
-      
-      {/* Top section removed as requested - ChartToHeart Brand */}
+    <div className="relative min-h-screen bg-slate-50 font-sans text-slate-800 flex flex-col justify-between selection:bg-medical-100 selection:text-medical-900 overflow-hidden" id="ehr-root-app">
+      <div className="absolute inset-0 pointer-events-none site-background-animations" />
+      <div className="relative z-10 w-full">
+        <header className="max-w-6xl mx-auto px-4 py-6 sm:px-6">
+          <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+            <div className="flex items-center gap-4">
+              <div className="flex h-16 w-16 items-center justify-center rounded-[26px] bg-gradient-to-br from-medical-700 to-teal-clinical-500 text-white shadow-2xl shadow-teal-clinical-500/25 animate-heartbeat">
+                <Heart className="h-8 w-8" />
+              </div>
+              <div>
+                <p className="text-sm uppercase tracking-[0.4em] text-teal-clinical-600 font-semibold">Chart2Heart</p>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-slate-900">Clinical Intake, Reimagined</h2>
+              </div>
+            </div>
+            <p className="max-w-xl text-sm sm:text-base text-slate-600">
+              Turn patient forms and transcripts into review-ready EHR summaries with an AI workflow built for healthcare teams.
+            </p>
+          </div>
+        </header>
+      </div>
 
       {/* Main Container Workflows */}
-      <main className="flex-1">
+      <main className="relative z-10 flex-1">
         <AnimatePresence mode="wait">
           {workflowState === 'welcome' && (
             <motion.div
