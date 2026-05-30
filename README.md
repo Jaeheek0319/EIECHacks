@@ -1,0 +1,2 @@
+# EIECHacks
+eiec hackathon thing
